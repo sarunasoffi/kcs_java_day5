@@ -16,7 +16,7 @@ public class ArrayUzduotys {
         names.add("Petka");
         names.add("Antaniuks");
 
-        Collections.sort(names);
+        //Collections.sort(names);
 
         for (String name : names) {
             if (name.length() >= 6) {
@@ -28,11 +28,29 @@ public class ArrayUzduotys {
 
 
         //tiktai nuo java 8
-        names.forEach(name -> {
-            if (name.length() >=6) {
-                System.out.println(name);
-            }
-        });
+
+//        names.forEach(name -> {
+//            if (name.length() >=6) {
+//                System.out.println(name);
+//            }
+//        });
+
+        System.out.println("Pirmas vardas yra " + getFirstElement(names));
+        System.out.println("Paskutinis vardas yra " + getLastElement(names));
+
+    }
+
+    private static String getFirstElement(List<String> names) {
+
+        String firstName = names.get(0);
+        return firstName;
+
+    }
+
+    private static String getLastElement(List<String> names) {
+
+        String lastName = names.get(names.size() - 1);
+        return lastName;
 
     }
 
